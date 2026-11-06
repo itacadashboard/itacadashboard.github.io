@@ -321,12 +321,63 @@ body.is-login footer{display:none}
   .ab-list{display:none}
   .auth-form{padding:28px 20px 40px;place-items:start center}
 }
+
+/* ---------- look v2 ---------- */
+body.is-login .appbar{display:none}
+.appbar{background:var(--brown);color:var(--on-brown);position:relative;overflow:hidden}
+.appbar::after{content:"";position:absolute;right:-160px;top:-200px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(224,126,90,.28),rgba(224,126,90,0) 70%);pointer-events:none}
+.appbar .wrap{position:relative;z-index:1}
+.appbar .brand{border-bottom:1px solid rgba(255,255,255,.1);padding-block:18px 16px}
+.appbar .bl{display:flex;align-items:center;gap:12px}
+.appbar .wordmark{color:var(--on-brown);font-size:21px}
+.ab-mark.sm{width:34px;height:34px;font-size:17px;border-radius:10px}
+.appbar .hero{padding-block:26px 30px}
+.appbar h1{color:var(--on-brown);font-size:40px}
+.appbar .eyebrow{color:#F2B79E}
+.appbar .today{color:rgba(246,237,230,.7)}
+.appbar .btn{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:var(--on-brown)}
+.appbar .btn:hover{background:rgba(255,255,255,.16)}
+.appbar .savechip{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:rgba(246,237,230,.85)}
+.me{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:rgba(246,237,230,.8)}
+.me .av{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#E07E5A;color:#fff;font-weight:700;font-size:13px;text-transform:uppercase}
+@media (max-width:600px){.me .mn{display:none}.appbar h1{font-size:28px}.appbar .hero{padding-block:18px 22px}}
+nav.tabs{background:var(--panel);margin-top:0;box-shadow:0 1px 0 var(--line),0 6px 18px rgba(29,20,15,.05);border-bottom:0}
+.tab{padding:15px 14px 13px}
+.board,.kpi,.tb,.agl,.card,.nx:not(.first){box-shadow:0 1px 2px rgba(29,20,15,.04),0 6px 20px rgba(29,20,15,.05)}
+.board,.agl,.card{border-radius:16px}
+.kpi{border-radius:14px;padding:16px 18px;position:relative}
+.kpi .kv{font-size:34px}
+.kpi:not(.go)::before{content:"";position:absolute;left:18px;top:0;width:28px;height:3px;border-radius:0 0 3px 3px;background:var(--line2)}
+.kpis .kpi:nth-child(1)::before{background:var(--ok)}
+.kpis .kpi:nth-child(2)::before{background:var(--warn)}
+.kpis .kpi:nth-child(3)::before{background:var(--accent)}
+.kpis .kpi.bad::before{background:var(--bad)}
+.kpi.go{overflow:hidden}
+.kpi.go::after{content:"";position:absolute;right:-60px;bottom:-60px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(224,126,90,.4),rgba(224,126,90,0) 70%)}
+h2{font-size:24px}
+.sh{margin-bottom:16px}
+.yh{margin:26px 0 12px}
+.yh > span:first-child{background:var(--brown);color:var(--on-brown);font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.06em;padding:4px 12px;border-radius:999px}
+.yh.bad > span:first-child{background:var(--bad)}
+.bhead{background:var(--panel2);border-radius:16px 16px 0 0}
+.brow{transition:background .12s}
+.co .n{font-size:20px}
+.tick{width:28px;height:28px}
+.tb{border-style:solid;border-radius:14px;padding:18px 20px;transition:transform .12s,box-shadow .12s}
+.tb:hover{transform:translateY(-1px);box-shadow:0 2px 4px rgba(29,20,15,.05),0 10px 26px rgba(29,20,15,.08)}
+.pill{background:var(--accent-wash);color:var(--accent-ink)}
+.nx{border-radius:14px}
+.nx.first{position:relative;overflow:hidden}
+.nx.first::after{content:"";position:absolute;right:-50px;bottom:-60px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(224,126,90,.35),rgba(224,126,90,0) 70%)}
+.fold summary h2{font-size:22px}
+main{padding-block:34px 70px}
+@media (max-width:900px){nav.tabs{position:static}}
 @media (max-width:600px){h1{font-size:30px}.dh h2{font-size:28px}.brand .eyebrow,.brand .me{display:none!important}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="brand"><span class="wordmark">Homeland</span><span class="r"><span class="eyebrow">Programa Ítaca · Control de ejecución</span><span class="me" id="me" hidden></span><button class="btn sm" id="install" data-act="install" hidden>Instalar app</button><button class="btn sm" id="logout" data-act="logout" hidden>Salir</button></span></div>
+<header class="appbar"><div class="wrap">
+  <div class="brand"><span class="bl"><span class="ab-mark sm" aria-hidden="true">Í</span><span class="wordmark">Homeland</span></span><span class="r"><span class="me" id="me" hidden></span><button class="btn sm" id="install" data-act="install" hidden>Instalar app</button><button class="btn sm" id="logout" data-act="logout" hidden>Salir</button></span></div>
   <div id="hero" hidden>
     <div class="hero">
       <div>
@@ -337,7 +388,7 @@ body.is-login footer{display:none}
       <div class="savechip" id="savechip" data-s="ok" hidden></div>
     </div>
   </div>
-</div>
+</div></header>
 <nav class="tabs" id="nav" aria-label="Vistas" hidden><div class="wrap navin"><div class="tabs-in" id="tabs" role="tablist"></div>
   <div class="tools" id="tools"><input type="search" id="q" placeholder="Buscar empresa o contacto" aria-label="Buscar"><select id="fenc" aria-label="Filtrar por encargado"></select><button class="btn sm" data-act="csv" title="Descargar la lista en Excel (CSV)">Exportar</button><button class="btn sm primary" id="btnNew" data-act="new">+ Nuevo bootcamp</button></div>
 </div></nav>
@@ -732,7 +783,7 @@ const soon=()=>{ clearTimeout(rT); rT=setTimeout(refetch,250); };
 async function startApp(){
   if(started) return; started=true; document.body.classList.remove('is-login');
   $('hero').hidden=false; $('nav').hidden=false; $('logout').hidden=false;
-  const me=$('me'); me.textContent=USER.email; me.hidden=false;
+  const me=$('me'); me.innerHTML='<span class="av">'+esc((shortName(USER.email)||'?').charAt(0))+'</span><span class="mn">'+esc(USER.email)+'</span>'; me.hidden=false;
   S={bootcamps:[],actualizado:null};
   $('main').innerHTML='<div class="empty">Cargando…</div>';
   const ok=await canWrite();
