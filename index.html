@@ -102,7 +102,7 @@ h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:0}
 .co .n{font-family:var(--serif);font-size:21px;font-weight:600;line-height:1.2}
 .co:hover .n{color:var(--accent-ink)}
 .co .s{font-size:13.5px;color:var(--muted)}
-.steps{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.steps{display:grid;grid-template-columns:repeat(8,minmax(0,1fr))}
 .step{padding-right:8px;display:flex;flex-direction:column;gap:2px}
 .step .top{display:flex;align-items:center}
 .step .top::after{content:"";flex:1;height:2px;background:var(--line);margin-left:8px}
@@ -225,7 +225,7 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);font-si
       </div>
       <div class="savechip" id="savechip" data-s="ok" hidden></div>
     </div>
-    <p class="rule">Primero vienen el <b>kick-off</b>, los <b>dolores definidos</b> y la <b>arquitectura definida</b>, sin fecha límite (si pasan el mismo día, se marcan juntos). Después, la empresa entrega <b>todos los datos 20 días antes</b>, los <b>modelos corriendo 2 semanas antes</b> y los <b>entregables listos 1 semana antes</b> del bootcamp. Marca cada paso cuando se cumpla.</p>
+    <p class="rule">Primero vienen la <b>reunión de pitch</b>, la <b>oferta comercial</b>, el <b>NDA firmado</b>, el <b>wishlist</b> y el <b>kick-off</b>, sin fecha límite. Después, la empresa entrega <b>todos los datos 4 semanas antes</b> y los <b>modelos quedan listos 1 semana antes</b> del bootcamp. Marca cada paso cuando se cumpla.</p>
   </div>
 </div>
 <nav class="tabs" id="nav" aria-label="Bootcamps" hidden><div class="wrap"><div class="tabs-in" id="tabs" role="tablist"></div></div></nav>
@@ -238,14 +238,15 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);font-si
 (function(){
 'use strict';
 const CFG=window.ITACA_CONFIG||{};
-const OFF={datos:20,corriendo:14,entregables:7};
+const OFF={datos:28,modelos:7};
 const HITOS=[
-  {k:'kickoff',label:'Kick-off',rule:'Sin fecha límite',desc:'Se le explica a la empresa cómo funciona el programa.',opt:true},
-  {k:'dolores',label:'Dolores definidos',rule:'Sin fecha límite',desc:'La empresa tiene claros sus dolores y quedaron identificados.',opt:true},
-  {k:'arquitectura',label:'Arquitectura definida',rule:'Sin fecha límite',desc:'Quedó armada la arquitectura del trabajo a partir de los dolores.',opt:true},
-  {k:'datos',label:'Entrega final de datos',rule:'20 días antes',desc:'La empresa entregó la totalidad de los datos.'},
-  {k:'corriendo',label:'Modelos corriendo',rule:'2 semanas antes',desc:'Los modelos ya están corriendo con la información de la empresa.'},
-  {k:'entregables',label:'Entregables listos',rule:'1 semana antes',desc:'Todo el material para la empresa está terminado.'}
+  {k:'pitch',label:'Reunión de pitch',rule:'Sin fecha límite',desc:'Se le presentó Ítaca a la empresa.',opt:true},
+  {k:'oferta',label:'Oferta comercial enviada',rule:'Sin fecha límite',desc:'La empresa recibió la oferta comercial.',opt:true},
+  {k:'nda',label:'NDA firmado',rule:'Sin fecha límite',desc:'Las dos partes firmaron el acuerdo de confidencialidad.',opt:true},
+  {k:'wishlist',label:'Wishlist generado',rule:'Sin fecha límite',desc:'Se le envió a la empresa la lista de datos que necesitamos.',opt:true},
+  {k:'kickoff',label:'Kick-off',rule:'Sin fecha límite',desc:'Reunión de arranque con el equipo de la empresa.',opt:true},
+  {k:'datos',label:'Datos recolectados',rule:'4 semanas antes',desc:'La empresa entregó la totalidad de los datos.'},
+  {k:'modelos',label:'Modelos listos',rule:'1 semana antes',desc:'Los modelos y el material para el bootcamp están terminados.'}
 ];
 const EST=[['confirmado','Confirmado'],['por-confirmar','Por confirmar'],['finalizado','Finalizado']];
 const MOD=['Presencial','Virtual'];

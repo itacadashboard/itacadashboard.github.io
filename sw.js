@@ -1,6 +1,6 @@
 // Permite instalar la app y abrirla rápido. Siempre intenta traer la versión más nueva;
 // si no hay internet, muestra la última guardada. Los datos de Supabase nunca se guardan aquí.
-const CACHE = 'itaca-v2';
+const CACHE = 'itaca-v3';
 const SHELL = ['./', 'index.html', 'config.js', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', e => {
