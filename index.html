@@ -210,6 +210,78 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);font-si
 .login h2{font-size:26px}
 .login p{margin:0;color:var(--muted);font-size:14.5px}
 .login code{background:var(--panel2);padding:1px 6px;border-radius:5px;font-size:13px}
+
+.navin{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.navin .tabs-in{flex:1;min-width:0}
+.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:6px 0}
+.tools input[type=search]{width:220px;padding:6px 10px;font-size:14px;background:var(--panel);border:1px solid var(--line2);border-radius:8px}
+.tools select{width:auto;padding:6px 10px;font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-bottom:34px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:2px;text-align:left}
+.kpi .kv{font-family:var(--serif);font-size:30px;font-weight:600;line-height:1.1}
+.kpi .kl{font-size:13px;color:var(--muted)}
+.kpi .kn{font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.25}
+.kpi.bad .kv{color:var(--bad)}
+.kpi.go{appearance:none;cursor:pointer;background:var(--brown);border-color:var(--brown);color:var(--on-brown)}
+.kpi.go .kl{color:rgba(246,237,230,.72)}
+@media (max-width:980px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi.go{grid-column:1/-1}}
+.yh{display:flex;align-items:baseline;gap:10px;margin:22px 0 10px;font-family:var(--serif);font-size:18px;font-weight:600}
+.yh .yc,.fold .yc{font-family:var(--sans);font-size:13px;color:var(--muted);font-weight:500}
+.yh.bad{color:var(--bad)}
+.bhead,.brow{display:grid;grid-template-columns:220px 1fr;gap:14px;align-items:center;padding:14px 20px}
+.bhead{padding-block:10px;border-bottom:1px solid var(--line);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.brow{border-top:1px solid var(--line)}
+.bhead + .brow{border-top:0}
+.brow:hover{background:var(--panel2)}
+.cells{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:4px;text-align:center}
+.cell{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0}
+.cell .cl{display:none;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.cell .cd{font-size:12.5px;font-weight:600;color:var(--ink);min-height:1em}
+.cell.done .cd{color:var(--faint)}
+.cell .cs{font-size:11.5px;font-weight:600}
+.cs.bad{color:var(--bad)} .cs.warn{color:var(--warn)} .cs.mut{color:var(--muted)}
+.cell.bad .tick{border-color:var(--bad)} .cell.warn .tick{border-color:var(--warn)}
+.cell.done .tick{background:var(--ok);border-color:var(--ok);color:#fff}
+.co .meta{display:flex;align-items:center;gap:8px;margin-top:3px;flex-wrap:wrap}
+.co .meta .enc{margin-top:0}
+.prog{display:inline-block;width:64px;height:6px;border-radius:99px;background:var(--line);overflow:hidden;vertical-align:middle}
+.prog i{display:block;height:100%;background:var(--ok);border-radius:99px}
+.prog.lg{width:180px;height:8px}
+.pn{font-size:12.5px;color:var(--muted);font-weight:600}
+.dprog{display:flex;align-items:center;gap:10px;margin-top:12px}
+.info a{color:var(--accent-ink);text-decoration:none}
+.info a:hover{text-decoration:underline}
+.tbh{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.tb .dots{display:flex;align-items:center;gap:4px;margin-top:6px}
+.tb .dots i{width:10px;height:10px;border-radius:50%;border:2px solid var(--line2)}
+.tb .dots i.on{background:var(--ok);border-color:var(--ok)}
+.tb .dots .pn{margin-left:6px}
+.tb .s b{color:var(--ink);font-weight:600}
+.tb .nt{font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:2px}
+.fold summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:10px;margin-bottom:14px}
+.fold summary::-webkit-details-marker{display:none}
+.fold summary h2::before{content:"▸ ";color:var(--muted);font-size:16px}
+.fold[open] summary h2::before{content:"▾ "}
+.fold.how .rule{margin:0 0 10px}
+.agl{background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.ag{appearance:none;background:none;border:0;border-top:1px solid var(--line);width:100%;display:grid;grid-template-columns:52px 1fr auto;gap:14px;align-items:center;padding:11px 16px;text-align:left;cursor:pointer}
+.ag:first-child{border-top:0}
+.ag:hover{background:var(--panel2)}
+.agd{display:flex;flex-direction:column;align-items:center;line-height:1.1}
+.agd b{font-family:var(--serif);font-size:21px}
+.agd span{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.agw{display:flex;flex-direction:column}
+.agw .what{font-weight:600}
+.agw .who{font-size:13.5px;color:var(--muted)}
+.ag.boot .agd b{color:var(--accent)}
+@media (max-width:900px){
+  .bhead{display:none}
+  .brow{grid-template-columns:1fr;gap:12px}
+  .cells{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:14px}
+  .cell .cl{display:block}
+  .tools{width:100%}
+  .tools input[type=search]{flex:1;width:auto;min-width:140px}
+}
 @media (max-width:600px){h1{font-size:30px}.dh h2{font-size:28px}.brand .eyebrow,.brand .me{display:none!important}}
 </style>
 </head>
@@ -219,16 +291,17 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);font-si
   <div id="hero" hidden>
     <div class="hero">
       <div>
-        <div class="eyebrow">Bootcamps para empresas</div>
-        <h1>Dashboard de ejecución</h1>
+        <div class="eyebrow">Programa Ítaca</div>
+        <h1>Bootcamps</h1>
         <div class="today" id="today"></div>
       </div>
       <div class="savechip" id="savechip" data-s="ok" hidden></div>
     </div>
-    <p class="rule">Primero vienen la <b>reunión de pitch</b>, la <b>oferta comercial</b>, el <b>NDA firmado</b>, el <b>wishlist</b> y el <b>kick-off</b>, sin fecha límite. Después, la empresa entrega <b>todos los datos 4 semanas antes</b> y los <b>modelos quedan listos 1 semana antes</b> del bootcamp. Marca cada paso cuando se cumpla.</p>
   </div>
 </div>
-<nav class="tabs" id="nav" aria-label="Bootcamps" hidden><div class="wrap"><div class="tabs-in" id="tabs" role="tablist"></div></div></nav>
+<nav class="tabs" id="nav" aria-label="Vistas" hidden><div class="wrap navin"><div class="tabs-in" id="tabs" role="tablist"></div>
+  <div class="tools" id="tools"><input type="search" id="q" placeholder="Buscar empresa o contacto" aria-label="Buscar"><select id="fenc" aria-label="Filtrar por encargado"></select><button class="btn sm" data-act="csv" title="Descargar la lista en Excel (CSV)">Exportar</button><button class="btn sm primary" id="btnNew" data-act="new">+ Nuevo bootcamp</button></div>
+</div></nav>
 <main class="wrap" id="main"></main>
 <div id="modal-root"></div>
 
@@ -238,19 +311,19 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);font-si
 (function(){
 'use strict';
 const CFG=window.ITACA_CONFIG||{};
-const OFF={datos:28,modelos:7};
+const OFF={datos:28,modelos:14};
 const HITOS=[
-  {k:'pitch',label:'Reunión de pitch',rule:'Sin fecha límite',desc:'Se le presentó Ítaca a la empresa.',opt:true},
-  {k:'oferta',label:'Oferta comercial enviada',rule:'Sin fecha límite',desc:'La empresa recibió la oferta comercial.',opt:true},
-  {k:'nda',label:'NDA firmado',rule:'Sin fecha límite',desc:'Las dos partes firmaron el acuerdo de confidencialidad.',opt:true},
-  {k:'wishlist',label:'Wishlist generado',rule:'Sin fecha límite',desc:'Se le envió a la empresa la lista de datos que necesitamos.',opt:true},
-  {k:'kickoff',label:'Kick-off',rule:'Sin fecha límite',desc:'Reunión de arranque con el equipo de la empresa.',opt:true},
-  {k:'datos',label:'Datos recolectados',rule:'4 semanas antes',desc:'La empresa entregó la totalidad de los datos.'},
-  {k:'modelos',label:'Modelos listos',rule:'1 semana antes',desc:'Los modelos y el material para el bootcamp están terminados.'}
+  {k:'pitch',s:'Pitch',label:'Reunión de pitch',rule:'Sin fecha límite',desc:'Se le presentó Ítaca a la empresa.',opt:true},
+  {k:'oferta',s:'Oferta',label:'Oferta comercial enviada',rule:'Sin fecha límite',desc:'La empresa recibió la oferta comercial.',opt:true},
+  {k:'nda',s:'NDA',label:'NDA firmado',rule:'Sin fecha límite',desc:'Las dos partes firmaron el acuerdo de confidencialidad.',opt:true},
+  {k:'wishlist',s:'Wishlist',label:'Wishlist generado',rule:'Sin fecha límite',desc:'Se le envió a la empresa la lista de datos que necesitamos.',opt:true},
+  {k:'kickoff',s:'Kick-off',label:'Kick-off',rule:'Sin fecha límite',desc:'Reunión de arranque con el equipo de la empresa.',opt:true},
+  {k:'datos',s:'Datos',label:'Datos recolectados',rule:'4 semanas antes',desc:'La empresa entregó la totalidad de los datos.'},
+  {k:'modelos',s:'Modelos',label:'Modelos listos',rule:'2 semanas antes',desc:'Los modelos y el material para el bootcamp están terminados.'}
 ];
 const EST=[['confirmado','Confirmado'],['por-confirmar','Por confirmar'],['finalizado','Finalizado']];
 const MOD=['Presencial','Virtual'];
-const ENC=['Rafael','Cipriano','Ambar'];
+const ENC=['Rafael','Cipriano','Ambar','Andrés','Catalina'];
 const FESTIVOS={'2026-10-12':'Día de la Raza','2026-11-02':'Todos los Santos','2026-11-16':'Independencia de Cartagena','2026-12-08':'Inmaculada Concepción','2026-12-25':'Navidad','2027-01-01':'Año Nuevo','2027-01-11':'Reyes Magos','2027-03-22':'San José','2027-03-25':'Jueves Santo','2027-03-26':'Viernes Santo'};
 const MES=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
 const MESL=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
@@ -270,8 +343,8 @@ const encSel=(v,id,dis)=>'<select class="inline" id="'+id+'" data-act="enc" aria
 const encTxt=b=>b.encargado?'<span class="enc">'+esc(b.encargado)+'</span>':'<span class="enc none">Sin encargado</span>';
 
 let sb=null, USER=null, S=null, RO=false, saved={}, pendingRender=false, started=false;
-let ui={tab:'resumen',modal:null};
-try{ const t=localStorage.getItem('itaca-tab'); if(t) ui.tab=t; }catch(e){}
+let ui={tab:'resumen',view:'tablero',q:'',enc:'',modal:null};
+try{ const t=localStorage.getItem('itaca-tab'); if(t) ui.tab=t; const v=localStorage.getItem('itaca-view'); if(v) ui.view=v; ui.enc=localStorage.getItem('itaca-enc')||''; }catch(e){}
 
 const find=id=>S.bootcamps.find(b=>b.id===id);
 const ses=b=>(b.sesiones||[]).filter(s=>s.fecha).map(s=>({...s,n:dn(s.fecha)})).sort((a,c)=>a.n-c.n);
@@ -339,76 +412,155 @@ document.addEventListener('focusout',()=>setTimeout(()=>{ if(pendingRender&&!bus
 
 /* ---------- vistas ---------- */
 function sorted(){ return S.bootcamps.slice().sort((a,b)=>{ const x=start(a),y=start(b); if(x==null&&y==null) return a.empresa.localeCompare(b.empresa,'es'); if(x==null) return 1; if(y==null) return -1; return x-y; }); }
+const norm2=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+function visible(){
+  const q=norm2(ui.q);
+  return sorted().filter(b=>(!q||norm2(b.empresa+' '+b.ciudad+' '+(b.contacto||{}).nombre).includes(q))&&(!ui.enc||(ui.enc==='-'?!b.encargado:b.encargado===ui.enc)));
+}
+const isPast=b=>{ const z=end(b); return z!=null&&z<TODAY; };
+const isDone=b=>b.estado==='finalizado'||isPast(b);
+const nDone=b=>HITOS.filter(h=>b.hitos[h.k].hecho).length;
+function nextStep(b){ const h=HITOS.find(h=>!b.hitos[h.k].hecho); return h?{h,s:st(b,h.k),d:hd(b,h.k)}:null; }
+function lateCount(list){ let n=0; list.forEach(b=>{ if(start(b)==null) return; HITOS.forEach(h=>{ if(st(b,h.k).c==='bad') n++; }); }); return n; }
+const fD=n=>{ const d=dt(n); return d.getUTCDate()+' '+MES[d.getUTCMonth()]; };
+const plural=(n,a,b)=>n+' '+(n===1?a:b);
+
+function renderTabs(){
+  let t='<button class="tab" data-act="view" data-id="tablero" aria-selected="'+(ui.tab==='resumen'&&ui.view==='tablero')+'">Tablero</button>';
+  t+='<button class="tab" data-act="view" data-id="agenda" aria-selected="'+(ui.tab==='resumen'&&ui.view==='agenda')+'">Agenda</button>';
+  if(ui.tab!=='resumen'){ const b=find(ui.tab); if(b) t+='<button class="tab" aria-selected="true">'+esc(b.empresa)+'</button>'; }
+  $('tabs').innerHTML=t;
+  $('tools').hidden=ui.tab!=='resumen';
+  $('btnNew').hidden=RO;
+  const sel=$('fenc'); const cur=ui.enc||'';
+  sel.innerHTML='<option value="">Todos los encargados</option>'+ENC.map(e=>'<option'+(cur===e?' selected':'')+'>'+e+'</option>').join('')+'<option value="-"'+(cur==='-'?' selected':'')+'>Sin encargado</option>';
+}
 function render(){
   const _t=fL(TODAY)+' de '+dt(TODAY).getUTCFullYear(); $('today').textContent=_t.charAt(0).toUpperCase()+_t.slice(1);
   if(ui.tab!=='resumen'&&!find(ui.tab)) ui.tab='resumen';
-  let t='<button class="tab" role="tab" data-act="tab" data-id="resumen" aria-selected="'+(ui.tab==='resumen')+'">Todos</button>';
-  sorted().forEach(b=>t+='<button class="tab" role="tab" data-act="tab" data-id="'+esc(b.id)+'" aria-selected="'+(ui.tab===b.id)+'">'+esc(b.empresa)+'</button>');
-  if(!RO) t+='<button class="tab add" data-act="new">+ Nuevo bootcamp</button>';
-  $('tabs').innerHTML=t;
+  renderTabs();
   const when=S.actualizado?new Date(S.actualizado).toLocaleString('es-CO',{day:'numeric',month:'short',hour:'numeric',minute:'2-digit'}):'';
-  $('main').innerHTML=(RO?'<div class="banner">Tu cuenta no tiene permiso para editar. Pídele a Rafael que agregue tu correo al equipo.</div>':'')+(ui.tab==='resumen'?vAll():vOne(find(ui.tab)))+
+  const body=ui.tab!=='resumen'?vOne(find(ui.tab)):(ui.view==='agenda'?vAgenda():vAll());
+  $('main').innerHTML=(RO?'<div class="banner">Tu cuenta no tiene permiso para editar. Pídele a Rafael que revise tu usuario.</div>':'')+body+
     '<footer><span>Homeland Consulting S.A.S. · Programa Ítaca</span><span>'+(when?'Último cambio '+when+(S.por?' · '+esc(shortName(S.por)):''):'')+'</span></footer>';
   renderModal();
 }
 
-function vAll(){
-  const act=sorted().filter(b=>b.estado!=='finalizado');
-  const dated=act.filter(b=>start(b)!=null), tbd=act.filter(b=>start(b)==null), done=sorted().filter(b=>b.estado==='finalizado');
+function kpis(list){
+  const act=list.filter(b=>!isDone(b));
+  const conf=act.filter(b=>b.estado==='confirmado'), pc=act.filter(b=>b.estado==='por-confirmar');
+  const next=conf.filter(b=>start(b)!=null&&start(b)>=TODAY).sort((a,b)=>start(a)-start(b))[0];
+  const late=lateCount(conf);
+  const in30=conf.filter(b=>{ const s=start(b); return s!=null&&s>=TODAY&&s-TODAY<=30; }).length;
+  return '<div class="kpis">'+
+    '<div class="kpi"><span class="kv num">'+conf.length+'</span><span class="kl">Confirmados</span></div>'+
+    '<div class="kpi"><span class="kv num">'+pc.length+'</span><span class="kl">Por confirmar</span></div>'+
+    '<div class="kpi"><span class="kv num">'+in30+'</span><span class="kl">Bootcamps en los próximos 30 días</span></div>'+
+    '<div class="kpi'+(late?' bad':'')+'"><span class="kv num">'+late+'</span><span class="kl">'+(late===1?'Paso atrasado':'Pasos atrasados')+'</span></div>'+
+    (next?'<button class="kpi go" data-act="tab" data-id="'+esc(next.id)+'"><span class="kl">Próximo bootcamp</span><span class="kn">'+esc(next.empresa)+'</span><span class="kl">'+esc(fL(start(next)))+' · '+inDays(start(next)-TODAY).toLowerCase()+'</span></button>':'')+
+  '</div>';
+}
+function nextCards(list){
   const ev=[];
-  dated.forEach(b=>{ HITOS.forEach(h=>{ if(!h.opt&&!b.hitos[h.k].hecho) ev.push({b,label:h.label,d:hd(b,h.k),s:st(b,h.k)}); }); const s0=start(b); if(s0>=TODAY) ev.push({b,label:'Inicia el bootcamp',d:s0,s:{w:'mut',t:inDays(s0-TODAY)}}); });
+  list.filter(b=>!isDone(b)&&b.estado==='confirmado'&&start(b)!=null).forEach(b=>{ HITOS.forEach(h=>{ if(!h.opt&&!b.hitos[h.k].hecho) ev.push({b,label:h.label,d:hd(b,h.k),s:st(b,h.k)}); }); const s0=start(b); if(s0>=TODAY) ev.push({b,label:'Inicia el bootcamp',d:s0,s:{w:'mut',t:inDays(s0-TODAY)}}); });
   ev.sort((a,c)=>a.d-c.d);
-  let h='<section><div class="sh"><h2>Lo próximo</h2><p>Las tres fechas más cercanas que aún no se han cumplido.</p></div>';
-  if(!ev.length) h+='<div class="board empty">No hay fechas pendientes.</div>';
-  else{ h+='<div class="next">'; ev.slice(0,3).forEach((e,i)=>{ const d=dt(e.d); h+='<button class="nx'+(i===0?' first':'')+'" data-act="tab" data-id="'+esc(e.b.id)+'"><div class="cal"><div class="d num">'+d.getUTCDate()+'</div><div class="m">'+MES[d.getUTCMonth()]+'</div></div><div><div class="what">'+esc(e.label)+'</div><div class="who">'+esc(e.b.empresa)+' · '+DIAL[d.getUTCDay()]+'</div><div class="when '+e.s.w+'">'+esc(e.s.t)+'</div></div></button>'; }); h+='</div>'; }
+  let h='<section><div class="sh"><h2>Lo próximo</h2><p>Las fechas más cercanas que aún no se han cumplido.</p></div>';
+  if(!ev.length) return h+'<div class="board empty">No hay fechas pendientes.</div></section>';
+  h+='<div class="next">'; ev.slice(0,3).forEach((e,i)=>{ const d=dt(e.d); h+='<button class="nx'+(i===0?' first':'')+'" data-act="tab" data-id="'+esc(e.b.id)+'"><div class="cal"><div class="d num">'+d.getUTCDate()+'</div><div class="m">'+MES[d.getUTCMonth()]+'</div></div><div><div class="what">'+esc(e.label)+'</div><div class="who">'+esc(e.b.empresa)+' · '+DIAL[d.getUTCDay()]+'</div><div class="when '+e.s.w+'">'+esc(e.s.t)+'</div></div></button>'; });
+  return h+'</div></section>';
+}
+function rowHtml(b){
+  const s0=start(b), n=nDone(b), dis=RO?' disabled':'';
+  let h='<div class="brow"><button class="co" data-act="tab" data-id="'+esc(b.id)+'"><span class="n">'+esc(b.empresa)+'</span><span class="s">'+esc(rangeTxt(b))+' · '+esc(b.ciudad||b.modalidad)+'</span><span class="meta">'+encTxt(b)+'<span class="prog" title="'+n+' de '+HITOS.length+' pasos"><i style="width:'+Math.round(n/HITOS.length*100)+'%"></i></span><span class="pn num">'+n+'/'+HITOS.length+'</span></span></button><div class="cells">';
+  HITOS.forEach(x=>{ const q=st(b,x.k), d=hd(b,x.k), done=b.hitos[x.k].hecho;
+    h+='<div class="cell '+q.c+'" title="'+esc(x.label+(d!=null?' · '+fL(d):''))+'"><span class="cl">'+x.s+'</span><button class="tick" data-act="tick" data-id="'+esc(b.id)+'" data-k="'+x.k+'" aria-pressed="'+done+'" aria-label="Marcar '+esc(x.label)+' de '+esc(b.empresa)+'"'+dis+'>✓</button>'+
+      '<span class="cd">'+(d!=null?fD(d):'')+'</span>'+(!done&&(q.c==='bad'||q.c==='warn')?'<span class="cs '+q.w+'">'+(q.c==='bad'?'Atrasado':(d===TODAY?'Hoy':'En '+(d-TODAY)+' d'))+'</span>':'')+'</div>'; });
+  h+='<div class="cell"><span class="cl">Bootcamp</span><span class="tick boot" aria-hidden="true">D</span><span class="cd">'+(s0!=null?fD(s0):'')+'</span><span class="cs mut">'+(s0==null?'':(s0>=TODAY?inDays(s0-TODAY):(TODAY<=end(b)?'En curso':'Realizado')))+'</span></div>';
+  return h+'</div></div>';
+}
+function boardHtml(list){
+  let h='<div class="board"><div class="bhead"><span></span><div class="cells">'+HITOS.map(x=>'<span title="'+esc(x.label+' · '+x.rule)+'">'+x.s+'</span>').join('')+'<span>Bootcamp</span></div></div>';
+  list.forEach(b=>h+=rowHtml(b));
+  return h+'</div>';
+}
+function cardHtml(b){
+  const ns=nextStep(b), s0=start(b);
+  return '<button class="tb" data-act="tab" data-id="'+esc(b.id)+'"><span class="tbh"><span class="n">'+esc(b.empresa)+'</span>'+(b.estado==='por-confirmar'?'<span class="pill">Por confirmar</span>':'')+'</span>'+encTxt(b)+
+    '<span class="s">'+esc(s0!=null?rangeTxt(b):'Fechas por definir')+(b.ciudad?' · '+esc(b.ciudad):'')+'</span>'+
+    '<span class="dots">'+HITOS.map(h=>'<i class="'+(b.hitos[h.k].hecho?'on':'')+'" title="'+esc(h.label)+'"></i>').join('')+'<span class="pn num">'+nDone(b)+'/'+HITOS.length+'</span></span>'+
+    (ns?'<span class="s">Sigue: <b>'+esc(ns.h.label)+'</b></span>':'<span class="s">Todos los pasos listos</span>')+
+    (b.nota?'<span class="nt">'+esc(b.nota)+'</span>':'')+'</button>';
+}
+function vAll(){
+  const list=visible();
+  const act=list.filter(b=>!isDone(b)), done=list.filter(isDone);
+  const conf=act.filter(b=>b.estado==='confirmado'), pc=act.filter(b=>b.estado==='por-confirmar');
+  const dated=conf.filter(b=>start(b)!=null), nodate=conf.filter(b=>start(b)==null);
+  let h=kpis(list)+nextCards(list);
+  if(!list.length) return h+'<div class="board empty">Ningún bootcamp coincide con la búsqueda.</div>';
+  h+='<section><div class="sh"><h2>Confirmados</h2><p>'+plural(conf.length,'bootcamp','bootcamps')+'. Toca un círculo para marcar el paso como cumplido.</p></div>';
+  const years={}; dated.forEach(b=>{ const y=dt(start(b)).getUTCFullYear(); (years[y]=years[y]||[]).push(b); });
+  Object.keys(years).sort().forEach(y=>{ h+='<div class="yh"><span>'+y+'</span><span class="yc">'+plural(years[y].length,'bootcamp','bootcamps')+'</span></div>'+boardHtml(years[y]); });
+  if(nodate.length) h+='<div class="yh"><span>Sin fechas todavía</span><span class="yc">'+plural(nodate.length,'bootcamp','bootcamps')+'</span></div><div class="tbd">'+nodate.map(cardHtml).join('')+'</div>';
+  if(!conf.length) h+='<div class="board empty">No hay bootcamps confirmados.</div>';
   h+='</section>';
-
-  h+='<section><div class="sh"><h2>Bootcamps con fecha</h2><p>Toca un círculo para marcar el paso como cumplido.</p></div><div class="board">';
-  if(!dated.length) h+='<div class="empty">Aún no hay bootcamps con fechas.</div>';
-  dated.forEach(b=>{
-    const s0=start(b);
-    h+='<div class="row"><button class="co" data-act="tab" data-id="'+esc(b.id)+'"><span class="n">'+esc(b.empresa)+'</span><span class="s">'+esc(rangeTxt(b))+(b.modalidad==='Virtual'?' · virtual':'')+'</span>'+encTxt(b)+(b.estado==='por-confirmar'?'<span class="pill" style="align-self:flex-start;margin-top:4px">Por confirmar</span>':'')+'</button><div class="steps">';
-    HITOS.forEach(x=>{ const q=st(b,x.k); h+='<div class="step '+q.c+'"><div class="top"><button class="tick" data-act="tick" data-id="'+esc(b.id)+'" data-k="'+x.k+'" aria-pressed="'+b.hitos[x.k].hecho+'" aria-label="Marcar '+x.label+' de '+esc(b.empresa)+'"'+(RO?' disabled':'')+'>✓</button></div><span class="lab">'+x.label+'</span><span class="dd">'+(hd(b,x.k)!=null?fS(hd(b,x.k)):'—')+'</span><span class="when '+q.w+'">'+q.t+'</span></div>'; });
-    h+='<div class="step"><div class="top"><span class="tick boot" aria-hidden="true">D</span></div><span class="lab">Bootcamp</span><span class="dd">'+fS(s0)+'</span><span class="when '+(s0>=TODAY?'mut':'ok')+'">'+(s0>=TODAY?inDays(s0-TODAY):(TODAY<=end(b)?'En curso':'Realizado'))+'</span></div>';
-    h+='</div></div>';
-  });
-  h+='</div></section>';
-
-  if(tbd.length){
-    h+='<section><div class="sh"><h2>Fechas por definir</h2><p>Los pasos se calculan solos al agregar las sesiones.</p></div><div class="tbd">';
-    tbd.forEach(b=>h+='<button class="tb" data-act="dates" data-id="'+esc(b.id)+'"><span class="n">'+esc(b.empresa)+'</span>'+encTxt(b)+'<span class="s">'+esc(b.nota||estL(b.estado))+'</span>'+HITOS.filter(h=>h.opt).map(h=>'<span class="kk'+(b.hitos[h.k].hecho?' ok':'')+'">'+(b.hitos[h.k].hecho?'✓ ':'○ ')+h.label+'</span>').join('')+'<span class="go">'+(RO?'Ver':'Agregar fechas →')+'</span></button>');
-    h+='</div></section>';
-  }
-  if(done.length){
-    h+='<section><div class="sh"><h2>Finalizados</h2></div><div class="tbd">';
-    done.forEach(b=>h+='<button class="tb" data-act="tab" data-id="'+esc(b.id)+'"><span class="n">'+esc(b.empresa)+'</span><span class="s">'+esc(rangeTxt(b))+'</span></button>');
-    h+='</div></section>';
-  }
+  h+='<section><div class="sh"><h2>Por confirmar</h2><p>Empresas en conversación. Cuando confirmen, cambia su estado a Confirmado.</p></div>';
+  h+=pc.length?'<div class="tbd">'+pc.map(cardHtml).join('')+'</div>':'<div class="board empty">No hay bootcamps por confirmar.</div>';
+  h+='</section>';
+  if(done.length) h+='<section><details class="fold"><summary><h2>Realizados</h2><span class="yc">'+plural(done.length,'bootcamp','bootcamps')+'</span></summary><div class="tbd">'+done.map(cardHtml).join('')+'</div></details></section>';
+  h+='<section><details class="fold how"><summary><h2>Cómo funciona</h2></summary><p class="rule">Primero vienen la <b>reunión de pitch</b>, la <b>oferta comercial</b>, el <b>NDA firmado</b>, el <b>wishlist</b> y el <b>kick-off</b>, sin fecha límite. Después, la empresa entrega <b>todos los datos 4 semanas antes</b> y los <b>modelos quedan listos 2 semanas antes</b> del bootcamp. Las fechas se calculan solas desde la primera sesión, y en cada empresa se pueden ajustar a mano. Cuando pasa la última sesión, el bootcamp se mueve a Realizados.</p></details></section>';
   return h;
+}
+function vAgenda(){
+  const list=visible().filter(b=>!isDone(b));
+  const ev=[];
+  list.forEach(b=>{
+    HITOS.forEach(h=>{ const d=hd(b,h.k); if(d!=null&&!b.hitos[h.k].hecho) ev.push({b,d,label:h.label,s:st(b,h.k),kind:'step'}); });
+    ses(b).forEach((s,i,arr)=>ev.push({b,d:s.n,label:'Bootcamp · módulo '+(i+1)+' de '+arr.length,s:{w:'mut',t:(s.inicio||'')+(s.fin?' – '+s.fin:'')},kind:'boot'}));
+  });
+  ev.sort((a,c)=>a.d-c.d||(a.kind==='boot'?-1:1));
+  const late=ev.filter(e=>e.d<TODAY), up=ev.filter(e=>e.d>=TODAY);
+  let h='<section><div class="sh"><h2>Agenda</h2><p>Todas las fechas pendientes, mes a mes.</p></div>';
+  if(!ev.length) return h+'<div class="board empty">No hay fechas pendientes.</div></section>';
+  const item=e=>{ const d=dt(e.d); return '<button class="ag'+(e.kind==='boot'?' boot':'')+'" data-act="tab" data-id="'+esc(e.b.id)+'"><span class="agd"><b class="num">'+d.getUTCDate()+'</b><span>'+DIA[d.getUTCDay()]+'</span></span><span class="agw"><span class="what">'+esc(e.label)+'</span><span class="who">'+esc(e.b.empresa)+(e.b.encargado?' · '+esc(e.b.encargado):'')+'</span></span><span class="when '+e.s.w+'">'+esc(e.s.t)+'</span></button>'; };
+  if(late.length) h+='<div class="yh bad"><span>Atrasados</span><span class="yc">'+plural(late.length,'paso','pasos')+'</span></div><div class="agl">'+late.map(item).join('')+'</div>';
+  let cur=null, buf=[];
+  const flush=()=>{ if(cur){ const [y,m]=cur.split('-'); h+='<div class="yh"><span>'+MESL[+m].charAt(0).toUpperCase()+MESL[+m].slice(1)+' '+y+'</span></div><div class="agl">'+buf.join('')+'</div>'; } buf=[]; };
+  up.forEach(e=>{ const d=dt(e.d), k=d.getUTCFullYear()+'-'+d.getUTCMonth(); if(k!==cur){ flush(); cur=k; } buf.push(item(e)); }); flush();
+  return h+'</section>';
 }
 
 function vOne(b){
-  const s0=start(b), ss=ses(b), c=b.contacto||{}, dis=RO?' disabled':'';
-  let h='<button class="back" data-act="tab" data-id="resumen">← Todos los bootcamps</button>';
-  h+='<div class="dh"><div><h2>'+esc(b.empresa)+'</h2><div class="info">';
+  const s0=start(b), ss=ses(b), c=b.contacto||{}, dis=RO?' disabled':'', n=nDone(b), sv=saved[b.id];
+  let h='<button class="back" data-act="tab" data-id="resumen">← Volver al tablero</button>';
+  h+='<div class="dh"><div><div class="eyebrow">'+esc(estL(b.estado))+'</div><h2>'+esc(b.empresa)+'</h2><div class="info">';
   h+='<span><b>'+esc(rangeTxt(b))+'</b>'+(s0!=null&&s0>=TODAY?' · '+inDays(s0-TODAY).toLowerCase():'')+'</span>';
   h+='<span>'+esc([b.modalidad,b.lugar||b.ciudad].filter(Boolean).join(' · '))+'</span>';
-  if(c.nombre||c.email||c.tel) h+='<span>'+esc([c.nombre,c.email,c.tel].filter(Boolean).join(' · '))+'</span>';
-  h+='</div></div><div class="acts"><label class="encl">Encargado '+encSel(b.encargado,'enc-'+esc(b.id),dis)+'</label><select class="inline" data-act="estado" aria-label="Estado"'+dis+'>'+EST.map(e=>'<option value="'+e[0]+'"'+(b.estado===e[0]?' selected':'')+'>'+e[1]+'</option>').join('')+'</select>'+(RO?'':'<button class="btn" data-act="edit">Editar</button><button class="btn danger" data-act="del">Eliminar</button>')+'</div></div>';
+  h+='</div>';
+  if(c.nombre||c.email||c.tel) h+='<div class="info"><span>'+esc(c.nombre||'')+'</span>'+(c.email?'<a href="mailto:'+esc(c.email)+'">'+esc(c.email)+'</a>':'')+(c.tel?'<a href="tel:'+esc(c.tel.replace(/\s+/g,''))+'">'+esc(c.tel)+'</a>':'')+'</div>';
+  h+='<div class="dprog"><span class="prog lg"><i style="width:'+Math.round(n/HITOS.length*100)+'%"></i></span><span class="pn num">'+n+' de '+HITOS.length+' pasos</span></div>';
+  h+='</div><div class="acts"><label class="encl">Encargado '+encSel(b.encargado,'enc-'+esc(b.id),dis)+'</label><select class="inline" data-act="estado" aria-label="Estado"'+dis+'>'+EST.map(e=>'<option value="'+e[0]+'"'+(b.estado===e[0]?' selected':'')+'>'+e[1]+'</option>').join('')+'</select>'+(RO?'':'<button class="btn" data-act="edit">Editar datos</button><button class="btn danger" data-act="del">Eliminar</button>')+'</div></div>';
 
   h+='<div class="two"><div class="card"><h3>Camino al bootcamp</h3><ul class="vt">';
   HITOS.forEach(x=>{
     const q=st(b,x.k), d=hd(b,x.k), man=!!b.hitos[x.k].fecha;
     h+='<li class="'+q.c+'"><button class="tick" data-act="tick" data-id="'+esc(b.id)+'" data-k="'+x.k+'" aria-pressed="'+b.hitos[x.k].hecho+'" aria-label="Marcar '+x.label+'"'+dis+'>✓</button><div><div class="t1"><span class="nm">'+x.label+'</span><span class="rl">'+x.rule+'</span></div><p class="ds">'+x.desc+'</p><div class="dt"><span class="d">'+(d!=null?fL(d):(x.opt?'Sin fecha fija':'Sin fecha'))+'</span><span class="when '+q.w+'">'+q.t+'</span></div>';
-    if(!RO&&(s0!=null||man||x.opt)) h+='<div class="adj">'+(x.opt?'<span>Fecha (opcional)</span>':(man?'Fecha ajustada a mano · <button class="linkbtn" data-act="hreset" data-k="'+x.k+'">usar la automática</button>':'<span>¿Se acordó otra fecha?</span>'))+'<input type="date" id="hd-'+esc(b.id)+'-'+x.k+'" data-act="hdate" data-k="'+x.k+'" value="'+(man?esc(b.hitos[x.k].fecha):'')+'" aria-label="Ajustar fecha de '+x.label+'"></div>';
+    if(!RO&&(man||(!b.hitos[x.k].hecho&&(s0!=null||x.opt)))) h+='<div class="adj">'+(x.opt?'<span>Fecha (opcional)</span>':(man?'Fecha ajustada a mano · <button class="linkbtn" data-act="hreset" data-k="'+x.k+'">usar la automática</button>':'<span>¿Se acordó otra fecha?</span>'))+'<input type="date" id="hd-'+esc(b.id)+'-'+x.k+'" data-act="hdate" data-k="'+x.k+'" value="'+(man?esc(b.hitos[x.k].fecha):'')+'" aria-label="Ajustar fecha de '+x.label+'"></div>';
     h+='</div></li>';
   });
-  h+='<li><span class="tick boot" aria-hidden="true">D</span><div><div class="t1"><span class="nm">Bootcamp</span></div><p class="ds">Cuatro jornadas de trabajo con el equipo de la empresa.</p><div class="dt"><span class="d">'+(s0!=null?fL(s0):'Por definir')+'</span>'+(s0!=null?'<span class="when mut">'+inDays(s0-TODAY)+'</span>':'')+'</div></div></li>';
+  h+='<li><span class="tick boot" aria-hidden="true">D</span><div><div class="t1"><span class="nm">Bootcamp</span></div><p class="ds">Jornadas de trabajo con el equipo de la empresa.</p><div class="dt"><span class="d">'+(s0!=null?fL(s0):'Por definir')+'</span>'+(s0!=null?'<span class="when mut">'+(s0>=TODAY?inDays(s0-TODAY):(TODAY<=end(b)?'En curso':'Realizado'))+'</span>':'')+'</div></div></li>';
   h+='</ul></div><div class="stack"><div class="card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px"><h3 style="margin:0">Sesiones</h3>'+(RO?'':'<button class="btn sm" data-act="edit">'+(ss.length?'Cambiar':'Agregar')+'</button>')+'</div>';
-  if(ss.length){ h+='<div class="sess">'; ss.forEach((s,i)=>{ const f=FESTIVOS[iso(s.n)]; h+='<div class="ses"><div class="k">Módulo '+(i+1)+'</div><div class="d">'+fS(s.n)+'</div><div class="h">'+esc(s.inicio||'')+(s.fin?' – '+esc(s.fin):'')+'</div>'+(f?'<div class="fest">Festivo</div>':'')+'</div>'; }); h+='</div>'; }
+  if(ss.length){ h+='<div class="sess">'; ss.forEach((s,i)=>{ const f=FESTIVOS[iso(s.n)]; h+='<div class="ses"><div class="k">Módulo '+(i+1)+'</div><div class="d">'+fS(s.n)+'</div><div class="h">'+esc(s.inicio||'')+(s.fin?' – '+esc(s.fin):'')+'</div>'+(f?'<div class="fest">Festivo: '+esc(f)+'</div>':'')+'</div>'; }); h+='</div>'; }
   else h+='<p class="hint">Aún no hay sesiones programadas.</p>';
-  h+='</div><div class="card"><h3>Nota</h3><textarea id="nota-'+esc(b.id)+'" data-act="nota" placeholder="Algo que el equipo deba tener presente"'+dis+'>'+esc(b.nota||'')+'</textarea></div></div></div>';
+  h+='</div><div class="card"><h3>Nota</h3><textarea id="nota-'+esc(b.id)+'" data-act="nota" placeholder="Algo que el equipo deba tener presente"'+dis+'>'+esc(b.nota||'')+'</textarea>'+(sv&&sv.t?'<p class="hint" style="margin-top:10px">Último cambio: '+new Date(sv.t).toLocaleString('es-CO',{day:'numeric',month:'short',hour:'numeric',minute:'2-digit'})+(sv.p?' · '+esc(shortName(sv.p)):'')+'</p>':'')+'</div></div></div>';
   return h;
+}
+
+function exportCsv(){
+  const head=['Empresa','Estado','Ciudad','Modalidad','Encargado','Inicio','Fin','Contacto','Email','Teléfono'].concat(HITOS.map(h=>h.label)).concat(['Nota']);
+  const rows=visible().map(b=>{ const s0=start(b), z=end(b), c=b.contacto||{}; return [b.empresa,estL(b.estado),b.ciudad,b.modalidad,b.encargado,s0!=null?iso(s0):'',z!=null?iso(z):'',c.nombre,c.email,c.tel].concat(HITOS.map(h=>b.hitos[h.k].hecho?'Sí':(hd(b,h.k)!=null?'Pendiente · '+iso(hd(b,h.k)):'Pendiente'))).concat([b.nota]); });
+  const csv='﻿'+[head].concat(rows).map(r=>r.map(v=>'"'+String(v==null?'':v).replace(/"/g,'""')+'"').join(';')).join('\r\n');
+  const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})); a.download='bootcamps-itaca-'+iso(TODAY)+'.csv'; document.body.appendChild(a); a.click(); setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); },500);
 }
 
 function renderModal(){
@@ -450,6 +602,8 @@ document.addEventListener('click',async e=>{
   if(a==='logout'){ if(sb) await sb.auth.signOut(); location.reload(); return; }
   if(!S) return;
   if(a==='tab') return go(el.dataset.id);
+  if(a==='view'){ ui.view=el.dataset.id; try{localStorage.setItem('itaca-view',ui.view);}catch(_){} return go('resumen'); }
+  if(a==='csv') return exportCsv();
   if(a==='dates'){ go(el.dataset.id); if(!RO) openEdit(find(el.dataset.id)); return; }
   if(a==='new') return openEdit(null);
   if(a==='close'||(a==='bg'&&e.target===el)){ ui.modal=null; return renderModal(); }
@@ -463,7 +617,9 @@ document.addEventListener('click',async e=>{
   if(a==='dodel'){ S.bootcamps=S.bootcamps.filter(x=>x.id!==ui.modal.id); ui.modal=null; ui.tab='resumen'; return commit(); }
   if(a==='hreset'){ b.hitos[el.dataset.k].fecha=null; return commit(); }
 });
+document.addEventListener('input',e=>{ if(e.target.id==='q'&&S){ ui.q=e.target.value; if(ui.tab==='resumen') render(); } });
 document.addEventListener('change',e=>{
+  if(e.target.id==='fenc'&&S){ ui.enc=e.target.value; try{localStorage.setItem('itaca-enc',ui.enc);}catch(_){} if(ui.tab==='resumen') render(); return; }
   const el=e.target, a=el.dataset&&el.dataset.act; if(!a||RO||!S) return;
   const b=find(ui.tab); if(!b) return;
   if(a==='estado'){ b.estado=el.value; commit(); }
